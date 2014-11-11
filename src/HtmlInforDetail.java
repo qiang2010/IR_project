@@ -7,10 +7,21 @@ public class HtmlInforDetail {
 	int    jointPeople; //参与人数
 	String body;      	// 新闻内容主题
 	String body_40Words;
+	String description; // 元数据中的
+	String keywords;    // 元数据中的
 	String url;      	// 当前网页的URL
-	public HtmlInforDetail(){
+	
+	public HtmlInforDetail(int id){
+		this.id = id;  //  初始化必须至少指定id
+	}
+	
+	// write all attribute into database
+	// arguments : information to connect database
+	public void writeToDataBase(){
+		
 		
 	}
+	
 	public int getId() {
 		return id;
 	}
@@ -76,7 +87,9 @@ public class HtmlInforDetail {
 		return "HtmlInforDetail [id=" + id + ", title=" + title
 				+ ", timeStamp=" + timeStamp + ", comments=" + comments
 				+ ", jointPeople=" + jointPeople + ", body=" + body
-				+ ", body_40Words=" + body_40Words + ", url=" + url + "]";
+				+ ", body_40Words=" + body_40Words + ", description="
+				+ description + ", keywords=" + keywords + ", url=" + url + "]";
 	}
+
 	
 }
