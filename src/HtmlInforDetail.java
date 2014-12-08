@@ -1,6 +1,7 @@
 
 public class HtmlInforDetail {
 	int id; 
+	int type;            // 标记该HTML信息来源是哪个网站
 	String title;  		// 标题
 	long   timeStamp; 	// 发布时间
 	int    comments;    // 评论数目
@@ -10,6 +11,7 @@ public class HtmlInforDetail {
 	String description; // 元数据中的
 	String keywords;    // 元数据中的
 	String url;      	// 当前网页的URL
+
 	
 	public HtmlInforDetail(int id){
 		this.id = id;  //  初始化必须至少指定id
